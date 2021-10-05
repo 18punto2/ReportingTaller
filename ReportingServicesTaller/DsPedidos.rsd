@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>DsNegocioWeb</DataSourceReference>
+      <CommandText>SELECT        Pedidos.IdPedido, Clientes.NombreCompañía AS Cliente, Pedidos.FechaPedido, Pedidos.FechaEntrega, Pedidos.Cargo, Empleados.Apellidos AS Vendedor, [Compañías de envíos].NombreCompañía AS FormaEnvio
+FROM            Pedidos INNER JOIN
+                         Empleados ON Pedidos.IdEmpleado = Empleados.IdEmpleado INNER JOIN
+                         [Compañías de envíos] ON Pedidos.FormaEnvío = [Compañías de envíos].IdCompañíaEnvíos INNER JOIN
+                         Clientes ON Pedidos.IdCliente = Clientes.IdCliente</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="IdPedido">
+        <DataField>IdPedido</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="Cliente">
+        <DataField>Cliente</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FechaPedido">
+        <DataField>FechaPedido</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="FechaEntrega">
+        <DataField>FechaEntrega</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="Cargo">
+        <DataField>Cargo</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Vendedor">
+        <DataField>Vendedor</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FormaEnvio">
+        <DataField>FormaEnvio</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

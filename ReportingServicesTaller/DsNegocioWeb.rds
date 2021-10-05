@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DsNegocioWeb">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=.;Initial Catalog=NegocioWeb</ConnectString>
+    <Prompt>Especifique un nombre de usuario y una contraseña para el origen de datos DataSource1:</Prompt>
+  </ConnectionProperties>
+  <DataSourceID>4d403161-53db-4b93-b5b4-9995fd386d7b</DataSourceID>
+</RptDataSource>
